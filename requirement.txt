@@ -1,0 +1,11 @@
+Flask
+flask-cors
+pytesseract
+pillow
+numpy
+opencv-python-headless
+python-dotenv
+transformers
+torch
+PyMuPDF
+groq
