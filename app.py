@@ -31,8 +31,10 @@ client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 # Load TrOCR model for handwritten text
 logger.info("Loading TrOCR model for handwritten text recognition...")
-processor = TrOCRProcessor.from_pretrained('microsoft/trocr-base-handwritten')
-model = VisionEncoderDecoderModel.from_pretrained('microsoft/trocr-base-handwritten')
+# processor = TrOCRProcessor.from_pretrained('microsoft/trocr-base-handwritten')
+# model = VisionEncoderDecoderModel.from_pretrained('microsoft/trocr-base-handwritten')
+processor = TrOCRProcessor.from_pretrained('microsoft/trocr-small-handwritten')
+model = VisionEncoderDecoderModel.from_pretrained('microsoft/trocr-small-handwritten')
 logger.info("TrOCR model loaded successfully")
 
 def is_handwritten(image):
