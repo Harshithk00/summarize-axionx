@@ -263,6 +263,7 @@ def health_check():
 
 if __name__ == '__main__':
     # Make sure Tesseract is installed and configured
+    print("✅ Flask app starting...")
     try:
         pytesseract.get_tesseract_version()
         logger.info("Tesseract OCR is properly installed")
@@ -270,4 +271,4 @@ if __name__ == '__main__':
         logger.error(f"Tesseract OCR is not properly installed: {str(e)}")
     
     logger.info("Starting PDF OCR server...")
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000)
